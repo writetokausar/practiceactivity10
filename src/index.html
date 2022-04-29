@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Project Starter</title>
+  <title>Postcards App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- 
@@ -13,8 +13,65 @@
 </head>
 
 <body>
-  <!-- Your HTML goes here -->
-  <h1>Welcome to CS 2350!</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Kausar Jahan</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cards">Current Postcards</a>
+          </li>
+        </ul>
+        <button class="btn btn-success ms-auto" id="new_card">New Postcard</button>
+      </div>
+    </div>
+  </nav>
 
+  <div class="jumbotron container-fluid py-5">
+    <div class="py-5 text-light">
+      <h1 class="display-4">See the world through postcards</h1>
+      <p class="lead">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa earum quasi, quo voluptates sed soluta alias
+        ipsam veritatis autem nostrum odit sapiente vero ut sequi. Nisi nostrum itaque vitae assumenda.
+      </p>
+    </div>
+  </div>
+
+  <div class="container my-3">
+    <h1>Current Postcards</h1>
+    <form id="myform" class="d-none" method="post">
+      <div class="form-group">
+        <label for="place">Place</label>
+        <input type="text" class="form-control" id="place" name="place" placeholder="Enter place here">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description"
+          placeholder="Enter description here"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="poster">Poster</label>
+        <input type="url" class="form-control" id="poster" name="poster" placeholder="Enter poster url">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-danger to-cancel">Cancel</button>
+    </form>
+
+    <div class="row row-cols-2 my-5" id="cards"></div>
+  </div>
+
+  <footer class="mt-4 bg-dark py-5 text-light">
+    <p class="lead text-center">&copy; All rights reserved</p>
+  </footer>
+
+  <script src="javascripts/main.js"></script>
 </body>
+
 </html>
